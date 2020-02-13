@@ -4,7 +4,9 @@ import java.util.stream.Stream;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.ApplicationContext;
 
 import tn.gov.cni.dpp.domain.Bien;
@@ -12,6 +14,8 @@ import tn.gov.cni.dpp.repository.BienRepository;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableCircuitBreaker
+@EnableHystrixDashboard
 public class GrbArticleServiceApplication {
 
 	public static void main(String[] args) {
