@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.ApplicationContext;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import tn.gov.cni.dpp.domain.Bien;
 import tn.gov.cni.dpp.repository.BienRepository;
 
@@ -16,6 +17,7 @@ import tn.gov.cni.dpp.repository.BienRepository;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableHystrixDashboard
+@EnableSwagger2
 public class GrbArticleServiceApplication {
 
 	public static void main(String[] args) {
